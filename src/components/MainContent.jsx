@@ -2,22 +2,23 @@ import React from 'react'
 import '../css/card.css'
 import TableCard from './TableCard'
 import CardContent from './CardContent'
-import { FaUsers} from 'react-icons/fa'
+import { FaUsers } from 'react-icons/fa'
 import { FaArrowTrendUp, FaCartShopping } from 'react-icons/fa6'
+import CustomLineChart from './CustomLineChart'
 
 const MainContent = () => {
 
     const cardItems = [
-        { icon: <FaUsers size={50}/>, label: 'Clients', value: '512', iconColor: 'text-green-500' },
-        { icon: <FaCartShopping size={50}/>, label: 'Sales', value: '$770', iconColor: 'text-red-500'},
-        { icon: <FaArrowTrendUp size={50}/>, label: 'Performance', value: '256%', iconColor: 'text-red-500' }
+        { icon: <FaUsers size={50} />, label: 'Clients', value: '512', iconColor: 'text-green-500' },
+        { icon: <FaCartShopping size={50} />, label: 'Sales', value: '$770', iconColor: 'text-red-500' },
+        { icon: <FaArrowTrendUp size={50} />, label: 'Performance', value: '256%', iconColor: 'text-red-500' }
     ];
 
     return (
         <section className="section main-section">
             <div className="grid gap-6 grid-cols-1 md:grid-cols-3 mb-6">
                 {cardItems.map((item, index) => (
-                       <div key={index}><CardContent label={item.label} value={item.value} icon={item.icon} iconColor={item.iconColor}/></div>
+                    <div key={index}><CardContent label={item.label} value={item.value} icon={item.icon} iconColor={item.iconColor} /></div>
                 ))}
             </div>
 
@@ -31,21 +32,21 @@ const MainContent = () => {
                         <span className="icon"><i className="mdi mdi-reload"></i></span>
                     </a>
                 </header>
-                {/* <div className="card-content">
+                <div className="card-content">
                     <div className="chart-area">
                         <div className="h-full">
                             <div className="chartjs-size-monitor">
-                            <div className="chartjs-size-monitor-expand">
-                                <div></div>
+                                <div className="chartjs-size-monitor-expand">
+                                    <div></div>
+                                </div>
+                                <div className="chartjs-size-monitor-shrink">
+                                    <div></div>
+                                </div>
                             </div>
-                            <div className="chartjs-size-monitor-shrink">
-                                <div></div>
-                            </div>
-                            </div>
-                            <canvas id="big-line-chart" width="2992" height="1000" className="chartjs-render-monitor block" style="height: 400px; width: 1197px;"></canvas>
+                            <CustomLineChart />
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
 
             <div className="notification blue">
