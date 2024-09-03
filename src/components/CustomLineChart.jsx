@@ -1,5 +1,12 @@
-import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import { chartData } from '../utils/ChartData';
+import {
+  CartesianGrid,
+  Legend,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip, XAxis, YAxis
+} from 'recharts';
+
 const CustomLineChart = () => {
   const data = [
     { name: 'January', sales: 33, profits: 24 },
@@ -8,6 +15,12 @@ const CustomLineChart = () => {
     { name: 'April', sales: 41, profits: 66 },
     { name: 'May', sales: 44, profits: 20 },
     { name: 'June', sales: 65, profits: 100 },
+    { name: 'July', sales: 44, profits: 120 },
+    { name: 'August', sales: 65, profits: 43 },
+    { name: 'September', sales: 23, profits: 100 },
+    { name: 'October', sales: 10, profits: 55 },
+    { name: 'November', sales: 3, profits: 77 },
+    { name: 'December', sales: 199, profits: 45 }
   ];
 
   return (

@@ -35,14 +35,6 @@ const MainContent = () => {
                 <div className="card-content">
                     <div className="chart-area">
                         <div className="h-full">
-                            <div className="chartjs-size-monitor">
-                                <div className="chartjs-size-monitor-expand">
-                                    <div></div>
-                                </div>
-                                <div className="chartjs-size-monitor-shrink">
-                                    <div></div>
-                                </div>
-                            </div>
                             <CustomLineChart />
                         </div>
                     </div>
