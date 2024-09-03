@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../css/aside/asidebar.css'
+import { Link } from 'react-router-dom'
 
 const Asidebar = () => {
     return (
@@ -13,54 +14,60 @@ const Asidebar = () => {
                 <p className="menu-label">General</p>
                 <ul className="menu-list">
                 <li className="--set-active-index-html">
-                    <a href="index.html">
+                    <Link to="/dashboard">
                     <span className="icon"><i className="mdi mdi-desktop-mac"></i></span>
                     <span className="menu-item-label">Dashboard</span>
-                    </a>
+                    </Link>
                 </li>
                 </ul>
                 <p className="menu-label">Examples</p>
                 <ul className="menu-list">
                 <li className="--set-active-tables-html">
-                    <a href="tables.html">
+                    <Link to="/add-task">
+                    <span className="icon"><i className="mdi mdi-table"></i></span>
+                    <span className="menu-item-label">Add Task</span>
+                    </Link>
+                </li>
+                <li className="--set-active-tables-html">
+                    <Link to="tables.html">
                     <span className="icon"><i className="mdi mdi-table"></i></span>
                     <span className="menu-item-label">Tables</span>
-                    </a>
+                    </Link>
                 </li>
                 <li className="--set-active-forms-html">
-                    <a href="forms.html">
+                    <Link to="forms.html">
                     <span className="icon"><i className="mdi mdi-square-edit-outline"></i></span>
                     <span className="menu-item-label">Forms</span>
-                    </a>
+                    </Link>
                 </li>
                 <li className="--set-active-profile-html">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                     <span className="icon"><i className="mdi mdi-account-circle"></i></span>
                     <span className="menu-item-label">Profile</span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="login.html">
+                    <Link to="login.html">
                     <span className="icon"><i className="mdi mdi-lock"></i></span>
                     <span className="menu-item-label">Login</span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a className="dropdown">
+                    <Link className="dropdown">
                     <span className="icon"><i className="mdi mdi-view-list"></i></span>
                     <span className="menu-item-label">Submenus</span>
                     <span className="icon"><i className="mdi mdi-plus"></i></span>
-                    </a>
+                    </Link>
                     <ul>
                     <li>
-                        <a href="#void">
+                        <Link to="#void">
                         <span>Sub-item One</span>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#void">
+                        <Link to="#void">
                         <span>Sub-item Two</span>
-                        </a>
+                        </Link>
                     </li>
                     </ul>
                 </li>
@@ -68,16 +75,16 @@ const Asidebar = () => {
                 <p className="menu-label">About</p>
                 <ul className="menu-list">
                 <li>
-                    <a href="https://justboil.me/tailwind-admin-templates/free-dashboard/" className="has-icon">
+                    <Link to="https://justboil.me/tailwind-admin-templates/free-dashboard/" className="has-icon">
                     <span className="icon"><i className="mdi mdi-help-circle"></i></span>
                     <span className="menu-item-label">About</span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="https://github.com/justboil/admin-one-tailwind" className="has-icon">
+                    <Link to="https://github.com/justboil/admin-one-tailwind" className="has-icon">
                     <span className="icon"><i className="mdi mdi-github-circle"></i></span>
                     <span className="menu-item-label">GitHub</span>
-                    </a>
+                    </Link>
                 </li>
                 </ul>
             </div>

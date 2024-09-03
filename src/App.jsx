@@ -1,20 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import './main.css'
-import Navbar from './components/nav/Navbar'
-import Asidebar from './components/aside/Asidebar'
-import Herobar from './components/Herobar'
-import MainContent from './components/MainContent'
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
+import AddTask from './pages/AddTask'
+import MainLayout from './layout/MainLayout'
+import Dashboard from './pages/Dashboard'
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <Asidebar />
-      <Herobar />
+  const [pageTitle, setPageTitle] = useState('Dashboard')
 
-      <MainContent />
-    </>
+  const onRequestingPage = (title) => {
+    setPageTitle(title)
+  }
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      < Route path='/' element={<MainLayout pageTitle={pageTitle}/>}>
+        <Route path='/dashboard' element={<Dashboard onPageLoad={onRequestingPage}/>} />
+        <Route path='/add-task' element={<AddTask onPageLoad={onRequestingPage}/>} />
+      </Route>
+
+    ))
+  return (
+    <RouterProvider router={router}/>
   )
 }
 

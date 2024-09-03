@@ -505,6 +505,7 @@ video {
 .field.addons {
     display: flex;
     justify-content: flex-start
+    
 }
 
 .field.addons .control.expanded {
